@@ -2,10 +2,10 @@ import React, {
      useCallback, 
      useState, 
      useEffect 
-} from 'react';
+} from 'react';//dev que e dev sempre deve indentar o codigo. nao precisa indentar altomaticamente
 
 import api from '../../services/api';
-import Pedido from '../../pages/Pedido';
+import Pedido from '../../models/Pedido';
 const Categoria = () => {
 
     const [ categorias, setCategoria ] = useState([]);
@@ -23,7 +23,7 @@ const Categoria = () => {
                 console.log("resposta", resposta);
 
             } catch (error) {
-                console.log("Error devs nao preparados para usar a api", error);
+                console.log("Erros devs nao preparados para usar a api", erro);
                 setErroMensagem(error);
             }
                 
@@ -60,7 +60,7 @@ const Categoria = () => {
             } catch (error) {
                 setErroMensagem('Erro na criação da categoria');
             }
-        }, [ mostrarCategorias, novoNome, novaDescricao ]
+        }, [ mostrarCategorias, novoNome, novaDescricao ]//verificar uso do calljonsons aqui !;
 
     );
 
@@ -92,6 +92,6 @@ const Categoria = () => {
 
         }, [ mostrarCategorias, categorias ]
     );
-
+}
 
 export default Categoria;
